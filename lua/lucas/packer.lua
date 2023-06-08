@@ -13,12 +13,12 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use 'folke/tokyonight.nvim'
-  vim.cmd[[colorscheme tokyonight-night]]
   use {
 	  'nvim-treesitter/nvim-treesitter',
 	  run = ':TSUpdate'
   }
+  use 'folke/tokyonight.nvim'
+  vim.cmd[[colorscheme tokyonight-night]]
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
@@ -40,10 +40,5 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},             -- Required
 		  {'rafamadriz/friendly-snippets'}, -- Optional
 	  }
-  }
-  use 'habamax/vim-godot'
-  use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 end)
